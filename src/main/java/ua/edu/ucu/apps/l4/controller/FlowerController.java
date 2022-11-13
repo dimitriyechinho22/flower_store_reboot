@@ -9,14 +9,14 @@ import java.util.List;
 @RestController
 @RequestMapping(path = "/api/v1/flower")
 public class FlowerController {
-    private final FlowerService flowerService;
+    private FlowerService flowerService;
     @Autowired
     public FlowerController(FlowerService flowerService) {
         this.flowerService = flowerService;
     }
 
     @GetMapping
-    public List<Flower> flowerList(){
+    public List<Flower> getFlowers(){
         return flowerService.getFlowers();
     }
 
@@ -25,3 +25,4 @@ public class FlowerController {
         flowerService.addFlower(flower);
     }
 }
+
