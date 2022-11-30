@@ -1,0 +1,11 @@
+GET https://vast-harbor-63587.herokuapp.com/api/v1/flower
+
+###
+POST https://vast-harbor-63587.herokuapp.com/api/v1/flower
+Content-Type: application/json
+
+{
+  "sepalLength": 100,
+  "color": "blue",
+  "price": 100
+}
